@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trailbound</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <main>
+        <section id="leftSide">
+            <h1>Trailbound</h1>
+            <div id="startMenu" class="startMenu">
+                <label for="hikerName">What's your first name?</label>
+                <input type="text" id="hikerName" name="hikerName" placeholder="Enter your name here" maxlength="15" />
+                <button id="startBtn" class="startBtn" type="button">Start Hike</button>
+            </div>
+            <div id="hikerStats" class="hikerStats">
+                <p id="hikerWelcome"></p>
+                <div id="stats" class="stats">
+                    <p id="hikerHealth"></p>
+                    <p id="hikerWater"></p>
+                    <p id="hikerFood"></p>
+                </div>
+            </div>
+        </section>
+
+        <section id="middle">
+            <div id="hikeTheTrail">
+                <h2 id="selectedTrailName"></h2>
+                <p id="trailMessage"></p>
+            </div>
+        </section>
+
+        <section id="rightSide">
+            <div id="trailSelection">
+                <h2>Choose Your Trail</h2>
+                <button id="trailOneBtn" class="trailBtn">
+                    <h3 id="trailOneName" class="trailName"></h3>
+                    <p id="trailOneDifficulty" class="trailDifficulty"></p>
+                    <p id="trailOneDistance" class="trailDistance"></p>
+                    <p id="trailOneDescription" class="trailDescription"></p>
+                </button>
+                <button id="trailTwoBtn" class="trailBtn">
+                    <h3 id="trailTwoName" class="trailName"></h3>
+                    <p id="trailTwoDifficulty" class="trailDifficulty"></p>
+                    <p id="trailTwoDistance" class="trailDistance"></p>
+                    <p id="trailTwoDescription" class="trailDescription"></p>
+                </button>
+                <button id="trailThreeBtn" class="trailBtn">
+                    <h3 id="trailThreeName" class="trailName"></h3>
+                    <p id="trailThreeDifficulty" class="trailDifficulty"></p>
+                    <p id="trailThreeDistance" class="trailDistance"></p>
+                    <p id="trailThreeDescription" class="trailDescription"></p>
+                </button>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
