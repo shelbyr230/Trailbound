@@ -8,14 +8,10 @@
 </head>
 <body>
     <main>
-        <section id="leftSide">
+        <section id="leftPanel" class="sidePanel">
             <h1>Trailbound</h1>
-            <div id="startMenu" class="startMenu">
-                <label for="hikerName">What's your first name?</label>
-                <input type="text" id="hikerName" name="hikerName" placeholder="Enter your name here" maxlength="15" />
-                <button id="startBtn" class="startBtn" type="button">Start Hike</button>
-            </div>
-            <div id="hikerStats" class="hikerStats">
+            <h3 class="leftTitle">Hiker</h3>
+            <div id="hikerStats" class="leftPanelContainer">
                 <p id="hikerWelcome"></p>
                 <div id="stats" class="stats">
                     <p id="hikerHealth"></p>
@@ -23,36 +19,112 @@
                     <p id="hikerFood"></p>
                 </div>
             </div>
+            <h3 class="leftTitle">Current Trail</h3>
+            <div id="currentTrail" class="leftPanelContainer">
+                <h4 id="currentTrailName"></h4>
+                <p id="currentTrailDifficulty"></p>
+                <p id="currentTrailDistance"></p>
+            </div>
         </section>
 
         <section id="middle">
-            <div id="hikeTheTrail">
-                <h2 id="selectedTrailName"></h2>
+            <div id="startMenu" class="middlePanelContainer">
+                <label for="hikerName">What's your first name?</label>
+                <input type="text" id="hikerName" name="hikerName" placeholder="Enter your name here" maxlength="15" />
+                <button id="startBtn" class="startBtn" type="button">Start Hike</button>
+            </div>
+            <div id="hikeTheTrail" class="middlePanelContainer">
+                <img id="trailImg" src="images/hiking-trail-pexels-niki-clark-9995029-31985745.jpg">
                 <p id="trailMessage"></p>
             </div>
         </section>
 
-        <section id="rightSide">
-            <div id="trailSelection">
-                <h2>Choose Your Trail</h2>
-                <button id="trailOneBtn" class="trailBtn">
-                    <h3 id="trailOneName" class="trailName"></h3>
-                    <p id="trailOneDifficulty" class="trailDifficulty"></p>
-                    <p id="trailOneDistance" class="trailDistance"></p>
-                    <p id="trailOneDescription" class="trailDescription"></p>
-                </button>
-                <button id="trailTwoBtn" class="trailBtn">
-                    <h3 id="trailTwoName" class="trailName"></h3>
-                    <p id="trailTwoDifficulty" class="trailDifficulty"></p>
-                    <p id="trailTwoDistance" class="trailDistance"></p>
-                    <p id="trailTwoDescription" class="trailDescription"></p>
-                </button>
-                <button id="trailThreeBtn" class="trailBtn">
-                    <h3 id="trailThreeName" class="trailName"></h3>
-                    <p id="trailThreeDifficulty" class="trailDifficulty"></p>
-                    <p id="trailThreeDistance" class="trailDistance"></p>
-                    <p id="trailThreeDescription" class="trailDescription"></p>
-                </button>
+        <section id="rightPanel" class="sidePanel">
+            <div id="rightPanelContainer">
+
+                <div id="tabs">
+                    <button id="backpackTab" class="tabBtn">Backpack</button>
+                    <button id="trailsTab" class="tabBtn">Trails</button>
+                </div>
+
+                <div id="backpack" class="rightPanelContainer">
+                    <div class="backpackTitleDiv">
+                        <h3 class="backpackTitle">Backpack</h3>
+                        <h4 id="backpackSpaces" class="backpackTitle">0/12</h4>
+                    </div>
+                    <div id="backpackItems" class="items">
+                        <div class="item">
+                            <p class="itemName"></p>
+                            <p class="itemCount"></p>
+                        </div>
+                        <div class="item">
+                            <p class="itemName"></p>
+                            <p class="itemCount"></p>
+                        </div>
+                        <div class="item">
+                            <p class="itemName"></p>
+                            <p class="itemCount"></p>
+                        </div>
+                        <div class="item">
+                            <p class="itemName"></p>
+                            <p class="itemCount"></p>
+                        </div>
+                        <div class="item">
+                            <p class="itemName"></p>
+                            <p class="itemCount"></p>
+                        </div>
+                        <div class="item">
+                            <p class="itemName"></p>
+                            <p class="itemCount"></p>
+                        </div>
+                        <div class="item">
+                            <p class="itemName"></p>
+                            <p class="itemCount"></p>
+                        </div>
+                        <div class="item">
+                            <p class="itemName"></p>
+                            <p class="itemCount"></p>
+                        </div>
+                        <div class="item">
+                            <p class="itemName"></p>
+                            <p class="itemCount"></p>
+                        </div>
+                        <div class="item">
+                            <p class="itemName"></p>
+                            <p class="itemCount"></p>
+                        </div>
+                        <div class="item">
+                            <p class="itemName"></p>
+                            <p class="itemCount"></p>
+                        </div>
+                        <div class="item">
+                            <p class="itemName"></p>
+                            <p class="itemCount"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="trailSelection" class="rightPanelContainer">
+                    <h3>Choose Your Trail</h3>
+                    <button id="trailOneBtn" class="trailBtn">
+                        <h3 id="trailOneName" class="trailName"></h3>
+                        <p id="trailOneDifficulty" class="trailDifficulty"></p>
+                        <p id="trailOneDistance" class="trailDistance"></p>
+                        <p id="trailOneDescription" class="trailDescription"></p>
+                    </button>
+                    <button id="trailTwoBtn" class="trailBtn">
+                        <h3 id="trailTwoName" class="trailName"></h3>
+                        <p id="trailTwoDifficulty" class="trailDifficulty"></p>
+                        <p id="trailTwoDistance" class="trailDistance"></p>
+                        <p id="trailTwoDescription" class="trailDescription"></p>
+                    </button>
+                    <button id="trailThreeBtn" class="trailBtn">
+                        <h3 id="trailThreeName" class="trailName"></h3>
+                        <p id="trailThreeDifficulty" class="trailDifficulty"></p>
+                        <p id="trailThreeDistance" class="trailDistance"></p>
+                        <p id="trailThreeDescription" class="trailDescription"></p>
+                    </button>
+                </div>
             </div>
         </section>
     </main>
