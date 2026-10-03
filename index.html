@@ -7,20 +7,81 @@
     <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <main>
+    <main id="main">
         <section id="leftPanel" class="sidePanel">
             <h1>Trailbound</h1>
-            <h3 class="leftTitle">Hiker</h3>
-            <div id="hikerStats" class="leftPanelContainer">
-                <p id="hikerWelcome"></p>
+            <div class="leftTabsDiv">
+                <button id="hikerBtn" class="leftTabs">Hiker</button>
+                <button id="backpackBtn" class="leftTabs">Backpack</button>
+            </div>
+            <div id="hikerStats" class="leftTabsContainer">
+                <h2 id="hikerWelcome"></h2>
                 <div id="stats" class="stats">
+                    <p id="hikerStamina"></p>
                     <p id="hikerHealth"></p>
                     <p id="hikerWater"></p>
                     <p id="hikerFood"></p>
                 </div>
             </div>
-            <h3 class="leftTitle">Current Trail</h3>
+            <div id="backpack" class="leftTabsContainer">
+                <div class="backpackTitleDiv">
+                    <h3 class="backpackTitle">Backpack</h3>
+                    <h4 id="backpackSpaces" class="backpackTitle">0/12</h4>
+                </div>
+                <div id="backpackItems" class="items">
+                    <div class="item">
+                        <p class="itemName"></p>
+                        <p class="itemCount"></p>
+                    </div>
+                    <div class="item">
+                        <p class="itemName"></p>
+                        <p class="itemCount"></p>
+                    </div>
+                    <div class="item">
+                        <p class="itemName"></p>
+                        <p class="itemCount"></p>
+                    </div>
+                    <div class="item">
+                        <p class="itemName"></p>
+                        <p class="itemCount"></p>
+                    </div>
+                    <div class="item">
+                        <p class="itemName"></p>
+                        <p class="itemCount"></p>
+                    </div>
+                    <div class="item">
+                        <p class="itemName"></p>
+                        <p class="itemCount"></p>
+                    </div>
+                    <div class="item">
+                        <p class="itemName"></p>
+                        <p class="itemCount"></p>
+                    </div>
+                    <div class="item">
+                        <p class="itemName"></p>
+                        <p class="itemCount"></p>
+                    </div>
+                    <div class="item">
+                        <p class="itemName"></p>
+                        <p class="itemCount"></p>
+                    </div>
+                    <div class="item">
+                        <p class="itemName"></p>
+                        <p class="itemCount"></p>
+                    </div>
+                    <div class="item">
+                        <p class="itemName"></p>
+                        <p class="itemCount"></p>
+                    </div>
+                    <div class="item">
+                        <p class="itemName"></p>
+                        <p class="itemCount"></p>
+                    </div>
+                </div>
+            </div>
+            <h3 class="leftTitle">Current Region</h3>
             <div id="currentTrail" class="leftPanelContainer">
+                <h4 id="currentRegion"></h4>
                 <h4 id="currentTrailName"></h4>
                 <p id="currentTrailDifficulty"></p>
                 <p id="currentTrailDistance"></p>
@@ -29,13 +90,84 @@
 
         <section id="middle">
             <div id="startMenu" class="middlePanelContainer">
-                <label for="hikerName">What's your first name?</label>
-                <input type="text" id="hikerName" name="hikerName" placeholder="Enter your name here" maxlength="15" />
-                <button id="startBtn" class="startBtn" type="button">Start Hike</button>
+                <div id="chooseHiker" class="chooseHiker">
+                    <label for="balancedHiker" class="hikerBtn">
+                    <input type="radio" name="hiker" value="balancedHiker" id="balancedHiker">
+                    <div>
+                        <img>
+                        <p>The Balanced Hiker</p>
+                        <p>A great all-around adventurer.</p>
+                    </div>
+                    <div class="startingStats">
+                        <p>Health <progress value="100" max="120"></progress> 100</progress></p>
+                        <p>Water <progress value="70" max="90"></progress> 70</progress></p>
+                        <p>Food <progress value="65" max="85"></progress> 65</progress></p>
+                        <p>Carry Weight <progress value="30" max="55"></progress> 30</progress></p>
+                    </div>
+                    </label>
+                    <label for="enduranceHiker" class="hikerBtn">
+                    <input type="radio" name="hiker" value="enduranceHiker" id="enduranceHiker">
+                        <div>
+                            <img>
+                            <p>The Endurance Hiker</p>
+                            <p>Built for the long haul.</p>
+                        </div>
+                        <div class="startingStats">
+                            <p>Health <progress value="120" max="120"></progress> 120</progress></p>
+                            <p>Water <progress value="60" max="90"></progress> 60</progress></p>
+                            <p>Food <progress value="60" max="85"></progress> 60</progress></p>
+                            <p>Carry Weight <progress value="40" max="55"></progress> 40</progress></p>
+                        </div>
+                    </label>
+
+                    <label for="explorer" class="hikerBtn">
+                    <input type="radio" name="hiker" value="explorer" id="explorer">
+                        <div>
+                            <img>
+                            <p>The Explorer</p>
+                            <p>Notices the little things.</p>
+                        </div>
+                        <div class="startingStats">
+                            <p>Health <progress value="80" max="120"></progress> 80</progress></p>
+                            <p>Water <progress value="65" max="90"></progress> 65</progress></p>
+                            <p>Food <progress value="60" max="85"></progress> 60</progress></p>
+                            <p>Carry Weight <progress value="35" max="55"></progress> 35</progress></p>
+                        </div>
+                    </label>
+
+                    <label for="trailblazer"  class="hikerBtn">
+                    <input type="radio" name="hiker" value="trailblazer" id="trailblazer">
+                        <div>
+                            <img>
+                            <p>The Trailblazer</p>
+                            <p>Fast, strong, and ready for anything.</p>
+                        </div>
+                        <div class="startingStats">
+                            <p>Health <progress value="110" max="120"></progress> 110</progress></p>
+                            <p>Water <progress value="90" max="90"></progress> 90</progress></p>
+                            <p>Food <progress value="85" max="85"></progress> 85</progress></p>
+                            <p>Carry Weight <progress value="55" max="55"></progress> 55</progress></p>
+                        </div>
+                    </label>
+                </div>
+                <div id="nameHiker" class="nameHiker">
+                    <label for="hikerName">Your Hiker's Name</label>
+                    <input type="text" id="hikerName" name="hikerName" placeholder="Enter your name" maxlength="15" />
+                    <p>(up to 15 characters)</p>
+                    <div>
+                        <p>Your journey begins with a name.</p>
+                        <p>Make it yours!</p>
+                    </div>
+                    <button id="startBtn" class="startBtn" type="button">Start Hike</button>
+                </div>
             </div>
             <div id="hikeTheTrail" class="middlePanelContainer">
-                <img id="trailImg" src="images/hiking-trail-pexels-niki-clark-9995029-31985745.jpg">
                 <p id="trailMessage"></p>
+                <div id="encounterOptions">
+                    <button class="encounterOption"></button>
+                    <button class="encounterOption"></button>
+                    <button class="encounterOption"></button>
+                </div>
             </div>
         </section>
 
@@ -43,65 +175,40 @@
             <div id="rightPanelContainer">
 
                 <div id="tabs">
-                    <button id="backpackTab" class="tabBtn">Backpack</button>
+                    <button id="regionsTab" class="tabBtn">Regions</button>
                     <button id="trailsTab" class="tabBtn">Trails</button>
                 </div>
 
-                <div id="backpack" class="rightPanelContainer">
-                    <div class="backpackTitleDiv">
-                        <h3 class="backpackTitle">Backpack</h3>
-                        <h4 id="backpackSpaces" class="backpackTitle">0/12</h4>
-                    </div>
-                    <div id="backpackItems" class="items">
-                        <div class="item">
-                            <p class="itemName"></p>
-                            <p class="itemCount"></p>
-                        </div>
-                        <div class="item">
-                            <p class="itemName"></p>
-                            <p class="itemCount"></p>
-                        </div>
-                        <div class="item">
-                            <p class="itemName"></p>
-                            <p class="itemCount"></p>
-                        </div>
-                        <div class="item">
-                            <p class="itemName"></p>
-                            <p class="itemCount"></p>
-                        </div>
-                        <div class="item">
-                            <p class="itemName"></p>
-                            <p class="itemCount"></p>
-                        </div>
-                        <div class="item">
-                            <p class="itemName"></p>
-                            <p class="itemCount"></p>
-                        </div>
-                        <div class="item">
-                            <p class="itemName"></p>
-                            <p class="itemCount"></p>
-                        </div>
-                        <div class="item">
-                            <p class="itemName"></p>
-                            <p class="itemCount"></p>
-                        </div>
-                        <div class="item">
-                            <p class="itemName"></p>
-                            <p class="itemCount"></p>
-                        </div>
-                        <div class="item">
-                            <p class="itemName"></p>
-                            <p class="itemCount"></p>
-                        </div>
-                        <div class="item">
-                            <p class="itemName"></p>
-                            <p class="itemCount"></p>
-                        </div>
-                        <div class="item">
-                            <p class="itemName"></p>
-                            <p class="itemCount"></p>
-                        </div>
-                    </div>
+                <div id="regionSelection" class="rightPanelContainer">
+                    <h3>Choose a Region</h3>
+                    <button id="regionOneBtn" class="regionBtn">
+                        <h3 id="regionOneName" class="regionName"></h3>
+                        <p id="regionOneDescription" class="regionDescription hidden"></p>
+                    </button>
+                    <button id="regionTwoBtn" class="regionBtn">
+                        <h3 id="regionTwoName" class="regionName"></h3>
+                        <p id="regionTwoDescription" class="regionDescription hidden"></p>
+                    </button>
+                    <button id="regionThreeBtn" class="regionBtn">
+                        <h3 id="regionThreeName" class="regionName"></h3>
+                        <p id="regionThreeDescription" class="regionDescription hidden"></p>
+                    </button>
+                    <button id="regionFourBtn" class="regionBtn">
+                        <h3 id="regionFourName" class="regionName"></h3>
+                        <p id="regionFourDescription" class="regionDescription hidden"></p>
+                    </button>
+                    <button id="regionFiveBtn" class="regionBtn">
+                        <h3 id="regionFiveName" class="regionName"></h3>
+                        <p id="regionFiveDescription" class="regionDescription hidden"></p>
+                    </button>
+                    <button id="regionSixBtn" class="regionBtn">
+                        <h3 id="regionSixName" class="regionName"></h3>
+                        <p id="regionSixDescription" class="regionDescription hidden"></p>
+                    </button>
+                    <button id="regionSevenBtn" class="regionBtn">
+                        <h3 id="regionSevenName" class="regionName"></h3>
+                        <p id="regionSevenDescription" class="regionDescription hidden"></p>
+                    </button>
                 </div>
 
                 <div id="trailSelection" class="rightPanelContainer">

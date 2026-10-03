@@ -6,6 +6,10 @@
     --earth-brown: #6B4F3B;
 }
 
+body {
+    background-color: var(--warm-sand);
+}
+
 main {
     height: 100vh;
     width: 100vw;
@@ -13,25 +17,75 @@ main {
     flex-direction: row;
     border: 2px solid black;
     border-radius: 10px;
+    background-image: url(images/Start_Menu2.jpg);
+    background-size: cover;
 }
 
 #middle {
     width: 100%;
-    background-color: var(--forest-green);
-
 }
 
 .middlePanelContainer {
     height: 100vh;
     display: flex;
-    flex-direction: column;
-    color: var(--forest-green);
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: var(--warm-sand);
+}
+
+#startMenu {
+
+    background-size: cover;
+    background-position: center;
+}
+
+.chooseHiker {
+    width: 50vw;
+    margin: 50px;
+    padding: 15px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
     background-color: var(--warm-sand);
+    border-radius: 10px;
+    align-items: center;
+}
+
+.hikerBtn {
+    border: 1px solid var(--earth-brown);
+    border-radius: 10px;
+    width: 45%;
+    margin: 10px;
+    color: var(--forest-green);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.startingStats {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nameHiker {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--warm-sand);
+    color: var(--forest-green);
+    border-radius: 10px;
 }
 
 #startBtn {
-    height: auto;
-    width: 80px;
+    height: 30px;
+    width: 80%;
+    border-radius: 10px;
+    background-color: var(--forest-green);
+    color: var(--warm-sand);
 }
 
 #trailImg {
@@ -48,8 +102,7 @@ main {
 .sidePanel {
     width: 25vw;
     padding: 10px;
-    border: 2px solid black;
-    background-color: var(--forest-green);
+    background-color: color-mix(in srgb, var(--forest-green), transparent 15%);
     color: var(--warm-sand);
 }
 
@@ -60,6 +113,30 @@ main {
     border-radius: 10px;
     background-color: var(--warm-sand);
     color: var(--forest-green);
+}
+
+.leftTabsContainer {
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: var(--warm-sand);
+    color: var(--forest-green);
+    height: 45vh;
+}
+
+.leftTabsDiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0px;
+}
+
+.leftTabs {
+    background-color: var(--forest-green);
+    color: var(--warm-sand);
+    width: 50%;
+    height: 30px;
+    font-size: 15px;
+    border-radius: 5px;
 }
 
 .stats {
@@ -74,6 +151,19 @@ main {
 
 /*-----Right Side Panel-----*/
 
+.regionBtn {
+    background-color: var(--warm-sand);
+    border: 1px solid var(--earth-brown);
+    color: var(--forest-green);
+}
+
+.hidden {
+    display: none;
+}
+
+.regionBtn:hover > .regionDescription {
+    display: block;
+}
 
 #trailSelection {
     display: flex;
